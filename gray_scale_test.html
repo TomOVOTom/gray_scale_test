@@ -22,7 +22,12 @@
         }
         .gray-scale-block {
             width: 100%;
-            height: 10px; /* 更细的灰阶块 */
+            height: 20px; /* 更细的灰阶块 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -38,6 +43,7 @@
             const block = document.createElement('div');
             block.className = 'gray-scale-block';
             block.style.backgroundColor = `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
+            block.textContent = `Level ${i}`;
             container.appendChild(block);
         }
     </script>
